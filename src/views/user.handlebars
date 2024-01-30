@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Management</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h1>User Management</h1>
+
+    <h2>User List</h2>
+    <ul>
+        {{#each users}}
+            <li>
+                <span>{{this.username}}</span>
+                <span>{{this.email}}</span>
+                <span>Role: {{this.role}}</span>
+                <button onclick="editUserRole('{{this._id}}')">Edit Role</button>
+                <button onclick="deleteUser('{{this._id}}')">Delete</button>
+            </li>
+        {{/each}}
+    </ul>
+
+    <div id="editUserRoleModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit User Role</h2>
+            <form id="editUserRoleForm">
+                <label for="role">Role:</label>
+                <select id="role" name="role">
+                    <option value="user">User</option>
+                    <option value="premium">Premium</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function editUserRole(userId) {
+        
+        }
+
+        function deleteUser(userId) {
+          
+        }
+    </script>
+</body>
+</html>

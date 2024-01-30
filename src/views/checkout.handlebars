@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+</head>
+<body>
+    <h1>Checkout</h1>
+    <div>
+        <h2>Cart Summary</h2>
+        <ul>
+            {{#each items}}
+            <li>
+                <h3>{{this.product.title}}</h3>
+                <p>Price: ${{this.product.price}}</p>
+                <p>Quantity: {{this.quantity}}</p>
+            </li>
+            {{/each}}
+        </ul>
+        <form action="/confirm-purchase" method="POST">
+            <input type="text" name="shippingAddress" placeholder="Shipping Address" required>
+            <input type="text" name="cardNumber" placeholder="Card Number" required>
+            <input type="text" name="expiryDate" placeholder="Expiry Date (MM/YY)" required>
+            <input type="text" name="cvv" placeholder="CVV" required>
+            <button type="submit">Confirm Purchase</button>
+        </form>
+    </div>
+</body>
+</html>
