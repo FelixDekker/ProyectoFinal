@@ -61,6 +61,11 @@ app.set('views', path.join(__dirname, 'src', 'views'));
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Route handler for the root path ("/")
+app.get('/', (req, res) => {
+  res.send('Welcome to the homepage!');
+});
+
 app.get('/mockingproducts', async (req, res) => {
   try {
     const mockProducts = await productService.generateMockProducts(100);
