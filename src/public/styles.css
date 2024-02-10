@@ -39,6 +39,48 @@ button:hover {
   background-color: #ff3300;
 }
 
+
+#cart {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+
+.checkout-container {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.checkout-container form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.checkout-container input[type="text"],
+.checkout-container input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.purchase-confirmation-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.purchase-confirmation-container ul {
+  padding: 0;
+}
+
+.purchase-confirmation-container ul li {
+  margin-bottom: 10px;
+}
+
 #productList {
   max-width: 400px;
   margin: 0 auto;
@@ -124,7 +166,6 @@ button.deleteButton:hover {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -148,39 +189,4 @@ button.deleteButton:hover {
   color: black;
   text-decoration: none;
   cursor: pointer;
-}
-
-.checkout-container {
-  max-width: 600px;
-  margin: 20px auto;
-}
-
-.checkout-container form {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.checkout-container input[type="text"],
-.checkout-container input[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-}
-
-.purchase-confirmation-container {
-  max-width: 600px;
-  margin: 20px auto;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.purchase-confirmation-container ul {
-  padding: 0;
-}
-
-.purchase-confirmation-container ul li {
-  margin-bottom: 10px;
 }
